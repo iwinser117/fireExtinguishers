@@ -44,7 +44,7 @@ export default function Nav() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
-      className=""
+      className='mb-4'
     >
       <NavbarContent>
         <NavbarMenuToggle
