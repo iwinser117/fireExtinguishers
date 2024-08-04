@@ -2,10 +2,10 @@ import { Card, CardBody, CardHeader, CardFooter } from "@nextui-org/react";
 
 const Img_hero = () => {
   return (
-    <div className="flex justify-around">
-      <Card className="w-2/5">
+    <div className="flex flex-col  md:justify-around md:flex-row">
+      <Card className="w-full md:2/5 m-2 lg:w-5/12" >
         <CardHeader>
-          <h2 className="text-2xl font-bold">Hero Image</h2>
+          <h2 className="text-2xl font-semibold">Extintores en Bogotá y alrededores</h2>
         </CardHeader>
         <CardBody>
           <p>
@@ -20,9 +20,9 @@ const Img_hero = () => {
           </p>
         </CardFooter>
       </Card>
-      <Card className="w-2/5">
+      <Card className="w-full md:2/5 m-2 lg:w-5/12">
         <CardHeader>
-          <h2 className="text-2xl font-bold">Hero Image</h2>
+          <h2 className="text-2xl font-semibold">Lideres en equipos contra incendios</h2>
         </CardHeader>
         <CardBody>
           <p>
