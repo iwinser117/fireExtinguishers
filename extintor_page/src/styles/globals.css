@@ -58,8 +58,3 @@
   height: 200px; /* Define una altura fija o proporcional según tus necesidades */
   overflow: hidden; /* Asegura que cualquier contenido que exceda los límites esté oculto */
 }
-
-
-body {
-  cursor: url('../../public/whatsapp.png'), auto !important; 
-}
