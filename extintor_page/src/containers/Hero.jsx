@@ -4,7 +4,7 @@ import Hero_image_copy from '@/components/Hero_description'
 
 const Hero = () => {
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-12">
       <Hero_image />
       <Hero_image_copy/>
     </div>
