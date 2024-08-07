@@ -3,9 +3,9 @@ import { Button } from "@nextui-org/react";
 
 export default function ButtonSencillo({ text, image }) {
   return (
-    <Button className="text-xl font-semibold" isIconOnly={!text}>
+    <Button size="lg" className="text-xl font-semibold bg-white" variant="bordered" olor="primary"  isIconOnly={!text}>
       {image ? (
-        <img src={image} alt="Icon" className="h-6 w-6" />
+        <img src={image} alt="Icon" className="h-8 w-8" />
       ) : (
         <span>{text}</span>
       )}

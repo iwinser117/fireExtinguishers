@@ -5,7 +5,7 @@ import Image_container from "@/containers/Images_home";
 import Banner_contact from "@/components/Banner_contact";
 export default function Home() {
   return (
-    <main className="grid gap-10">
+    <main className="grid gap-10 cursor-custom">
       <Hero/>
       <MainSection/>
       <Image_container/>

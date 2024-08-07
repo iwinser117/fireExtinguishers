@@ -54,7 +54,12 @@
 
 .fire {
   position: relative; /* Establece un contexto de posicionamiento para los pseudoelementos */
-  width: 300px; /* Define un ancho fijo o proporcional según tus necesidades */
+  width: 80%; /* Define un ancho fijo o proporcional según tus necesidades */
   height: 200px; /* Define una altura fija o proporcional según tus necesidades */
   overflow: hidden; /* Asegura que cualquier contenido que exceda los límites esté oculto */
+}
+
+
+body {
+  cursor: url('../../public/whatsapp.png'), auto !important; 
 }
