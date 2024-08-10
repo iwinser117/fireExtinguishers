@@ -58,3 +58,17 @@
   height: 200px; /* Define una altura fija o proporcional según tus necesidades */
   overflow: hidden; /* Asegura que cualquier contenido que exceda los límites esté oculto */
 }
+
+
+.footerHeader{
+  width: 75% ;
+  margin: auto;
+}
+
+.p-footer {
+  /* opacity: 0.5; */
+}
+
+.ul-footer{
+  justify-content: space-around ;
+}

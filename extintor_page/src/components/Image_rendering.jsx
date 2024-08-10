@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 
 export default function Image_render({ image, text }) {
   return (
-    <div className="relative w-60 h-60">
+    <div className="relative w-60 h-60 container">
       <Image
         isZoomed
         width="100%"

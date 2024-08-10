@@ -8,7 +8,7 @@ const image_container_main = () => {
   ];
 
   return (
-    <main className="w-11/12 mx-auto">
+    <main className="w-10/12 mx-auto container">
       <div className="flex flex-col content-around items-center text-medium sm:flex-col md:flex-row">
         {images.map((image) => (
           <div key={image.id} className="m-2 w-full flex justify-center">
