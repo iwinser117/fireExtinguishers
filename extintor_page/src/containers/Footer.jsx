@@ -1,70 +1,58 @@
 import { Divider, Avatar } from "@nextui-org/react";
+import Aliados from "@/components/Aliados";
+import RedesSociales from "@/components/RedesSociales";
+
 const Footer = () => {
   return (
-    <section className="container">
+    <section className="container font-mono">
       <Divider />
       <footer className="flex flex-col w-full">
         <div className="footerHeader m-4">
           <h3 className="text-xl text-center font-mono font-semibold m-2">
-            Encabezado del footer
+            Extintores para todos
           </h3>
-          <p className="flex">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, earum
-            velit! Laudantium officia excepturi nobis suscipit doloremque minus,
-            possimus quae veritatis et ut tenetur ex amet libero neque, earum
-            alias!
+          <p className="footerText">
+            Generamos confianza para todos nuestros usuarios, puedes contar con
+            un aliado para sus procesos y necesidades. <br /> <br />
+            Estamos disponibles para cualquier solicitud y contamos con un
+            excelente grupo de aliados para suplir todas nuestra solicitudes.
           </p>
         </div>
-        <main className="m-4 flex flex-col sm:flex-row md:flex-row">
-          <div className="w-full sm:w-1/3 md:w-1/3 m-2">
-            <h3 className="text-center text-xl font-semibold">
-              Información de contacto
-            </h3>
-            <p className="p-2 text-pretty">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
-              dolorem aut nemo eligendi odit at excepturi placeat atque numquam
-              veniam maiores non, nostrum voluptatibus provident molestias
-              tempora ab debitis consequatur.
-            </p>
-          </div>
-          <div className="w-full sm:w-1/3 md:w-1/3 m-2">
-            <h3 className="text-center text-xl font-semibold">
-              Redes sociales
-            </h3>
-            <ul className="flex ul-footer m-4">
-              <li>
-                <a href="#">
-                  <Avatar
-                    isBordered
-                    radius="sm"
-                    src="facebook.jpg"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Avatar
-                    isBordered
-                    radius="sm"
-                    src="https://cdn.pixabay.com/photo/2016/08/01/21/00/icon-1562136_1280.png"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <Avatar
-                    isBordered
-                    radius="sm"
-                    src="https://cdn.pixabay.com/photo/2016/11/01/12/09/twitter-logo-1788039_1280.jpg"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="w-full sm:w-1/3 md:w-1/3 m-2">
+        <main className="m-4 flex flex-col">
+          <div className="w-full m-2 mx-auto">
             <h3 className="text-center text-xl font-semibold">Contacto</h3>
-            <p>telefono</p>
-            <p>correo</p>
+            <div className="align-contact">
+              <p className="text-center my-4">
+                <a href="tel:+57008965349000" className="text-decoration-none">
+                  Cotizaciones <br />
+                  +57 008965349000
+                </a>
+              </p>
+              <p className="text-center my-4">
+                <a
+                  href="mailto:juanitoelbarbero@gmail.com"
+                  className="text-decoration-none"
+                >
+                  Email <br />
+                  juanitoelbarbero@gmail.com
+                </a>
+              </p>
+              <p className="text-center my-4">
+                <a
+                  href="https://wa.me/573001234567123"
+                  className="text-decoration-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Whatsapp <br />
+                  +57 300 1234567123
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="w-11/12 mx-auto flex flex-col sm:flex-row md:flex-row">
+            <Aliados />
+            <RedesSociales />
           </div>
         </main>
         <section className="m-4">

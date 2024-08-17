@@ -59,16 +59,39 @@
   overflow: hidden; /* Asegura que cualquier contenido que exceda los límites esté oculto */
 }
 
-
-.footerHeader{
-  width: 75% ;
+.footerHeader {
+  width: 75%;
   margin: auto;
+  padding: 12px;
 }
 
 .p-footer {
   /* opacity: 0.5; */
 }
 
-.ul-footer{
-  justify-content: space-around ;
+.ul-footer {
+  justify-content: space-around;
+}
+
+.footerText {
+  width: 90%;
+  margin: auto;
+}
+.align-contact {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: yellow;
+  background:  rgb(206, 28, 28) 25%;
+  padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .align-contact {
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+  }
 }
