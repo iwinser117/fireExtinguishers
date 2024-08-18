@@ -19,6 +19,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   const menuItems = [
+    { name: "Inicio", href: "/" },
     { name: "Productos", href: "/productos" },
     { name: "Nosotros", href: "/nosotros" },
     { name: "Ubicación", href: "#" },
@@ -44,7 +45,7 @@ export default function Nav() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
-      className='mb-4'
+      className="mb-4"
     >
       <NavbarContent>
         <NavbarMenuToggle

@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </main>
         <section className="m-4">
-          <p className="text-center text-small p-footer">v-2024.09.08</p>
+          <p className="text-center text-small p-footer">v-2024.09 - 1.0.1</p>
         </section>
       </footer>
     </section>
