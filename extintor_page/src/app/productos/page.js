@@ -1,43 +1,46 @@
+"use client";
 import Footer from "@/containers/Footer";
+import { useState } from "react";
+import { products, gabinetes, senales } from "../../data/productData";
+import ProductList from "@/components/ProductList";
+import ProductDetails from "@/components/ProductDetails";
+import CategoryProducts from "@/components/Categoty_products";
 export default function Productos() {
-  const listProductsCategory = [
-    { id: 1, name: "extintores secos" },
-    { id: 2, name: "extintores húmedos" },
-    { id: 3, name: "extintores de espuma" },
-    { id: 4, name: "extintores de polvo" },
-    { id: 5, name: "extintores de dióxido de carbon" },
-  ];
-  const listGabinetes = [
-    { id: 1, name: "gabinete de madera" },
-    { id: 2, name: "gabinete de acero" },
-    { id: 3, name: "gabinete de vidrio" },
-  ];
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
   return (
-    <main>
-      <article>
-        <header>
-          <h2>Productos</h2>
-        </header>
-        <figure></figure>
-        <p>lorem</p>
+    <main className="container">
+      <article className="">
+        {/* <CategoryProducts /> */}
       </article>
 
-      <section className="bg-yellow-600">
-        <h2 className="text-2xl font-medium font-serif">Productos</h2>
-        <main>
-          <h3>Extintores</h3>
-          <ul>
-            {listProductsCategory.map((product, id) => (
-              <li key={product.id}>{product.name}</li>
-            ))}
-          </ul>
-          <h3>Gabinetes</h3>
-          <ul>
-            {listGabinetes.map((itemGabinete) => (
-              <li key={itemGabinete.id}>{itemGabinete.name}</li>
-            ))}
-          </ul>
-        </main>
+      <section className="my-8">
+        <h2 className="text-3xl font-medium font-serif my-8 text-center">Productos</h2>
+        <div className="flex flex-row flex-wrap items-center">
+          <div className="w-full sm:w-1/3 lg:w-1/4 pr-4">
+            <ProductList
+              title="Extintores"
+              items={products}
+              onItemClick={handleItemClick}
+            />
+            <ProductList
+              title="Gabinetes"
+              items={gabinetes}
+              onItemClick={handleItemClick}
+            />
+            <ProductList
+              title="Señalización"
+              items={senales}
+              onItemClick={handleItemClick}
+            />
+          </div>
+          <div className="w-full sm:w-2/3 lg:w-3/4">
+            <ProductDetails selectedItem={selectedItem} />
+          </div>
+        </div>
       </section>
       <Footer />
     </main>
