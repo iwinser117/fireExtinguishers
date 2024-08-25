@@ -32,7 +32,7 @@ const UnifiedCard = ({
     <Image
       removeWrapper
       alt="Card background"
-      className={`z-0 w-full h-full object-cover ${imageClassName}`}
+      className={`z-0 w-full h-full object-contain ${imageClassName}`}
       src={imageSrc}
     />
     {(footerContent || buttonText || footerIcon) && (
@@ -71,11 +71,11 @@ const UnifiedCard = ({
 
 export default function CategoryProducts() {
   return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8 mx-auto">
+    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8 mx-auto h-full items-center">
       <UnifiedCard
         title="Stream the Acme event"
         subtitle="What to watch"
-        imageSrc="https://nextui.org/images/card-example-4.jpeg"
+        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
         footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
         footerTitle="Breathing App"
         footerSubtitle="Get a good night's sleep."
@@ -84,7 +84,7 @@ export default function CategoryProducts() {
       <UnifiedCard
         title="Contribute to the planet"
         subtitle="Plant a tree"
-        imageSrc="https://nextui.org/images/card-example-3.jpeg"
+        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
         footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
         footerTitle="Breathing App"
         footerSubtitle="Get a good night's sleep."
@@ -93,32 +93,11 @@ export default function CategoryProducts() {
       <UnifiedCard
         title="Creates beauty like a beast"
         subtitle="Supercharged"
-        imageSrc="https://nextui.org/images/card-example-2.jpeg"
+        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
         footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
         footerTitle="Breathing App"
         footerSubtitle="Get a good night's sleep."
         buttonText="Get App"
-      />
-      <UnifiedCard
-        title="Acme camera"
-        subtitle="New"
-        imageSrc="https://nextui.org/images/card-example-6.jpeg"
-        className="col-span-12 sm:col-span-5"
-        imageClassName="scale-125 -translate-y-6"
-        footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
-        footerTitle="Breathing App"
-        footerSubtitle="Get a good night's sleep."
-        buttonText="Get App"
-      />
-      <UnifiedCard
-        title="Your checklist for better sleep"
-        subtitle="Your day your way"
-        imageSrc="https://nextui.org/images/card-example-5.jpeg"
-        footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
-        footerTitle="Breathing App"
-        footerSubtitle="Get a good night's sleep."
-        buttonText="Get App"
-        className="col-span-12 sm:col-span-7"
       />
     </div>
   );

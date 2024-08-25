@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Footer from "@/containers/Footer";
-import { products, gabinetes, senales } from "../../data/productData";
+import { products, gabinetes, senales, tanques, luces } from "../../data/productData";
 import ProductList from "@/components/ProductList";
 import ProductDetails from "@/components/ProductDetails";
 import CategoryProducts from "@/components/Categoty_products";
@@ -43,7 +43,12 @@ export default function Productos() {
             />
             <ProductList
               title="Lavado de tanques"
-              items={senales}
+              items={tanques}
+              onItemClick={handleItemClick}
+            />
+            <ProductList
+              title="Iluminación"
+              items={luces}
               onItemClick={handleItemClick}
             />
           </div>

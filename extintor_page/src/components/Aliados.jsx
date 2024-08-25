@@ -22,7 +22,7 @@ export default function Aliados() {
         Nuestros aliados
       </h3>
       <p className="text-center text-gray-600 mb-6">
-        Si requieres más servicios, puedes contactar a nuestros aliados:
+        Si requieres más productos o servicios, puedes contactar a nuestros aliados:
       </p>
       <ul className="space-y-4">
         {allies.map((ally, index) => (

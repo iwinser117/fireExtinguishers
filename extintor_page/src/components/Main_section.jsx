@@ -9,7 +9,7 @@ const MainSection = () => {
           <div>
             <div>
               <p className="text-justify text-xl font-mono">
-                Protege lo que más importa con nuestro servicio de seguridad
+                Protege lo que más importa con nuestro producto de seguridad
                 contra incendios en Bogotá en <strong>Extintores Inc</strong>,
                 entendemos la importancia de proteger tu hogar, negocio,
                 vehículo, y cualquier otro inmueble. Por eso, te ofrecemos el
