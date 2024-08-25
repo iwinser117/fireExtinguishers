@@ -2,7 +2,7 @@ import { Card, CardBody, CardHeader, CardFooter } from "@nextui-org/react";
 
 const Img_hero = () => {
   return (
-    <div className="flex flex-col  md:justify-around md:flex-row">
+    <div className="flex flex-col  md:justify-around md:flex-row mt-4">
       <Card className="w-full md:2/5 m-2 lg:w-5/12" >
         <CardHeader>
           <h2 className="text-2xl font-semibold">Extintores en Bogotá y alrededores</h2>

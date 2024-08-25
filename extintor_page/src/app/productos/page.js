@@ -17,7 +17,7 @@ export default function Productos() {
         {/* <CategoryProducts /> */}
       </article>
 
-      <section className="my-8">
+      <section className="my-8 w-10/12 mx-auto">
         <h2 className="text-3xl font-medium font-serif my-8 text-center">Productos</h2>
         <div className="flex flex-row flex-wrap items-center">
           <div className="w-full sm:w-1/3 lg:w-1/4 pr-4">

@@ -3,8 +3,8 @@ import Image_render from "@/components/Image_rendering";
 const image_container_main = () => {
   const images = [
     { id: 1, url: "img1.jpg", text: "Venta" },
-    { id: 2, url: "img2.jpg", text: "Recarga" },
     { id: 3, url: "img3.jpg", text: "Mantenimiento" },
+    { id: 2, url: "img2.jpg", text: "Recarga" },
   ];
 
   return (

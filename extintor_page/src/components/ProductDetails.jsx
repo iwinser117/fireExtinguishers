@@ -21,7 +21,7 @@ export default function ProductDetails({ selectedItem }) {
         <h3 className="text-2xl font-mono text-yellow-500 font-extrabold mb-2 uppercase text-center">
           {selectedItem.name}
         </h3>
-        <p className="text-white text-xl">{selectedItem.description}</p>
+        <p className="text-white text-xl p-2">{selectedItem.description}</p>
       </div>
     </div>
   );

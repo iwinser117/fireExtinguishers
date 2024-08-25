@@ -3,12 +3,12 @@ const MainSection = () => {
     <main className="image_container_hero w-10/12 mx-auto text-pretty mb-8">
       <section className="">
         <div>
-          <h3 className="text-center font-semibold text-2xl m-4">
+          <h3 className="text-center font-bold text-3xl my-6 font-mono">
             Protección contra incendios en Bogotá
           </h3>
           <div>
             <div>
-              <p>
+              <p className="text-justify text-xl font-mono">
                 Protege lo que más importa con nuestro servicio de seguridad
                 contra incendios en Bogotá en <strong>Extintores Inc</strong>,
                 entendemos la importancia de proteger tu hogar, negocio,
@@ -19,18 +19,18 @@ const MainSection = () => {
               </p>
             </div>
             <br />
-            <div className="flex flex-col p-2 content-around items-center  text-medium sm:flex-col md:flex-row">
+            <div className="flex flex-col text-xl p-2 content-around items-center text-center sm:flex-col md:flex-row m-6">
               <div className="m-2 w-full">
-                <strong>Venta</strong>: Equipos de seguridad contra incendios
-                adaptados a tus necesidades.
+                <p><strong>Venta</strong>: Equipos de seguridad contra incendios
+                  adaptados a tus necesidades.</p>
+              </div>
+              <div className="m-2 w-full">
+                <p><strong>Mantenimiento</strong>: Servicio integral para todo tipo
+                  de dispositivos.</p>
               </div>
               <div className="m-2 w-full ">
-                <strong>Recarga</strong>: Mantenimiento de dispositivos para
-                asegurar su eficacia.
-              </div>
-              <div className="m-2 w-full">
-                <strong>Mantenimiento</strong>: Servicio integral para todo tipo
-                de dispositivos.
+                <p><strong>Recarga</strong>: Mantenimiento de dispositivos para
+                  asegurar su eficacia.</p>
               </div>
             </div>
           </div>
