@@ -1,27 +1,34 @@
 import CategoryProducts from "@/components/Categoty_products";
+
 export default function ProductDetails({ selectedItem }) {
   if (!selectedItem) {
     return (
-      <>
+      <div className="bg-gray-100 p-8 rounded-lg shadow-md">
+        <h3 className="text-2xl font-semibold mb-4 text-center">Seleccione un producto para ver los detalles</h3>
         <CategoryProducts />
-      </>
+      </div>
     );
   }
+
   return (
-    <div className="flex flex-col md:flex-row items-center 
-    bg-gradient-to-b from-gray-800 via-gray-700 to-gray-900 shadow-lg rounded-lg overflow-hidden">
-      <div className="w-full md:w-1/3 mb-4 md:mb-0">
-        <img
-          src={selectedItem.image}
-          alt={selectedItem.name}
-          className="max-w-full h-auto mx-auto"
-        />
-      </div>
-      <div className="w-full md:w-2/3 md:pl-4">
-        <h3 className="text-2xl font-mono text-yellow-500 font-extrabold mb-2 uppercase text-center">
-          {selectedItem.name}
-        </h3>
-        <p className="text-white text-xl p-2">{selectedItem.description}</p>
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="md:flex">
+        <div className="md:w-1/3 flex items-center justify-center p-4">
+          <img
+            className="max-w-full max-h-64 object-contain"
+            src={selectedItem.image}
+            alt={selectedItem.name}
+          />
+        </div>
+        <div className="md:w-2/3 p-8">
+          <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+            {selectedItem.category}
+          </div>
+          <h2 className="block mt-1 text-2xl leading-tight font-medium text-black">
+            {selectedItem.name}
+          </h2>
+          <p className="mt-4 text-gray-600">{selectedItem.description}</p>
+        </div>
       </div>
     </div>
   );

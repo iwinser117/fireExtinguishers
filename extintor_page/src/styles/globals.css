@@ -53,10 +53,10 @@
 }
 
 .fire {
-  position: relative; /* Establece un contexto de posicionamiento para los pseudoelementos */
-  width: 80%; /* Define un ancho fijo o proporcional según tus necesidades */
-  height: 200px; /* Define una altura fija o proporcional según tus necesidades */
-  overflow: hidden; /* Asegura que cualquier contenido que exceda los límites esté oculto */
+  position: relative; 
+  width: 80%; 
+  height: 200px;
+  overflow: hidden; 
 }
 
 .footerHeader {
@@ -83,8 +83,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: yellow;
-  background:  rgb(206, 28, 28) 25%;
+  color: rgb(241, 0, 12);
   padding: 4px;
 }
 
