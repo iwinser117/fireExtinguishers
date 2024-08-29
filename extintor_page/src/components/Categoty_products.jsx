@@ -71,7 +71,7 @@ const UnifiedCard = ({
 
 export default function CategoryProducts() {
   return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8 mx-auto h-full items-center">
+    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8 mx-auto h-full items-center bg-gray-100 rounded-lg p-6 shadow-md">
       <UnifiedCard
         title="Stream the Acme event"
         subtitle="What to watch"

@@ -1,7 +1,7 @@
 const MainSection = () => {
   return (
     <main className="image_container_hero w-10/12 mx-auto text-pretty mb-8">
-      <section className="">
+      <section className="bg-gray-100 rounded-lg p-6 shadow-md">
         <div>
           <h3 className="text-center font-bold text-3xl my-6 font-mono">
             Protección contra incendios en Bogotá

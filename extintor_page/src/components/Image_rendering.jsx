@@ -12,7 +12,7 @@ export default function Image_render({ image, text }) {
         src={image.url}
       />
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-blue-800 text-xl font-bold shadow-md z-20 bg-slate-200 w-full text-center">
+        <span className="text-blue-600 text-xl font-bold shadow-md z-20 bg-slate-200 w-full text-center">
           {text}
         </span>
       </div>

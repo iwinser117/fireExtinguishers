@@ -112,21 +112,21 @@ export const products = [
       name: "luces de emergencia",
       description:
         "Luces de emergencia que se activan automáticamente en caso de corte de energía. Proporcionan iluminación esencial para la evacuación segura y rápida en situaciones críticas.",
-      image: "./luces/LUCES_DE_EMERGENCIA.jpg", 
+      image: "./luces/luces1.jpg", 
     },
     {
       id: 2,
       name: "luces externas",
       description:
         "Luces externas diseñadas para iluminar áreas al aire libre, como estacionamientos y entradas. Son resistentes a la intemperie y ofrecen una iluminación potente y duradera.",
-      image: "./luces/LUCES_EXTERNAS.jpg", 
+      image: "./luces/luces2.jpg", 
     },
     {
       id: 3,
       name: "cambio de lámparas",
       description:
         "Servicios de cambio de lámparas para mantener una iluminación eficiente y adecuada en cualquier entorno. Incluye la instalación y sustitución de lámparas de diversas especificaciones.",
-      image: "./luces/CAMBIO_DE_LAMPARAS.jpg", 
+      image: "./luces/luces3.jpg", 
     },
   ];
 

@@ -3,7 +3,7 @@ import CategoryProducts from "@/components/Categoty_products";
 export default function ProductDetails({ selectedItem }) {
   if (!selectedItem) {
     return (
-      <div className="h-full bg-gray-100 p-8 rounded-lg shadow-md ">
+      <div className="h-full p-8 ">
         <h3 className="text-2xl font-semibold mb-4 text-center">Seleccione un producto para ver los detalles</h3>
         <CategoryProducts />
       </div>

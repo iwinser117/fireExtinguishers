@@ -1,10 +1,27 @@
-"use client";
-import { useState } from "react";
+'use client'
+import React, { useState } from "react";
 import Footer from "@/containers/Footer";
 import { products, gabinetes, senales, tanques, luces } from "../../data/productData";
 import ProductList from "@/components/ProductList";
 import ProductDetails from "@/components/ProductDetails";
 import CategoryProducts from "@/components/Categoty_products";
+
+const ProductCategory = ({ title, items, selectedItem, onItemClick }) => {
+  return (
+    <div className="mb-8">
+      <h3 className="text-2xl font-medium mb-4">{title}</h3>
+      <ProductList
+        items={items}
+        onItemClick={onItemClick}
+      />
+      {selectedItem && items.includes(selectedItem) && (
+        <div className="mt-4 lg:hidden">
+          <ProductDetails selectedItem={selectedItem} />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default function Productos() {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -26,33 +43,38 @@ export default function Productos() {
         <h2 className="text-3xl font-medium font-serif mb-8 text-center">Catálogo de Productos</h2>
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-1/4">
-            <ProductList
+            <ProductCategory
               title="Extintores"
               items={products}
+              selectedItem={selectedItem}
               onItemClick={handleItemClick}
             />
-            <ProductList
+            <ProductCategory
               title="Gabinetes"
               items={gabinetes}
+              selectedItem={selectedItem}
               onItemClick={handleItemClick}
             />
-            <ProductList
+            <ProductCategory
               title="Señalización"
               items={senales}
+              selectedItem={selectedItem}
               onItemClick={handleItemClick}
             />
-            <ProductList
+            <ProductCategory
               title="Lavado de tanques"
               items={tanques}
+              selectedItem={selectedItem}
               onItemClick={handleItemClick}
             />
-            <ProductList
+            <ProductCategory
               title="Iluminación"
               items={luces}
+              selectedItem={selectedItem}
               onItemClick={handleItemClick}
             />
           </div>
-          <div className="w-full lg:w-3/4">
+          <div className="w-full lg:w-3/4 hidden lg:block">
             <ProductDetails selectedItem={selectedItem} />
           </div>
         </div>

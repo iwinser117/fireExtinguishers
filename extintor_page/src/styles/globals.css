@@ -7,6 +7,9 @@
     text-wrap: balance;
   }
 }
+body{
+  font-family: font-mono;
+}
 :root {
   /* the only thing needed is a grainy/noisy background image */
   --glitter: url("https://assets.codepen.io/13471/silver-glitter-background.png");
