@@ -1,11 +1,24 @@
 import CategoryProducts from "@/components/Categoty_products";
+import { Info } from 'lucide-react';
 
 export default function ProductDetails({ selectedItem }) {
   if (!selectedItem) {
     return (
-      <div className="h-full p-8 ">
-        <h3 className="text-2xl font-semibold mb-4 text-center">Seleccione un producto para ver los detalles</h3>
-        <CategoryProducts />
+      <div className="h-full p-8 bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center justify-center">
+        <Info className="w-16 h-16 text-blue-500 mb-4" />
+        <h3 className="text-2xl font-semibold mb-4 text-center text-gray-800">
+          Seleccione un producto para ver los detalles
+        </h3>
+        <p className="text-center text-gray-600 max-w-md">
+          Explore nuestra amplia gama de productos de seguridad contra incendios.
+          Haga clic en cualquier producto de la lista para obtener más información.
+        </p>
+        <ul className="mt-6 text-sm text-gray-700">
+          <li className="mb-2">✓ Información detallada del producto</li>
+          <li className="mb-2">✓ Especificaciones técnicas</li>
+          <li className="mb-2">✓ Imágenes de alta calidad</li>
+          <li>✓ Recomendaciones de uso</li>
+        </ul>
       </div>
     );
   }

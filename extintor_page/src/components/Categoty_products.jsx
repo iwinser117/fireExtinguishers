@@ -1,104 +1,49 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Button,
-} from "@nextui-org/react";
+import React, { useState, useEffect } from 'react';
+import {category} from '@/data/productData'
+const CategorySlider = ({ categories }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const UnifiedCard = ({
-  title,
-  subtitle,
-  imageSrc,
-  footerContent,
-  buttonText,
-  footerIcon,
-  footerTitle,
-  footerSubtitle,
-  className = "col-span-12 sm:col-span-4",
-  imageClassName = "",
-}) => (
-  <Card className={`h-[300px] ${className}`} isFooterBlurred={!!footerContent}>
-    <CardHeader className="absolute z-10 top-1 flex-col items-start">
-      {subtitle && (
-        <p className="text-tiny text-white/60 uppercase font-bold">
-          {subtitle}
-        </p>
-      )}
-      {title && <h4 className="text-white font-medium text-large">{title}</h4>}
-    </CardHeader>
-    <Image
-      removeWrapper
-      alt="Card background"
-      className={`z-0 w-full h-full object-contain ${imageClassName}`}
-      src={imageSrc}
-    />
-    {(footerContent || buttonText || footerIcon) && (
-      <CardFooter className="absolute bottom-0 z-10 border-t-1 border-default-600 dark:border-default-100 bg-black/40">
-        {footerContent && <div>{footerContent}</div>}
-        {(footerIcon || footerTitle || footerSubtitle) && (
-          <div className="flex flex-grow gap-2 items-center">
-            {footerIcon && (
-              <Image
-                alt="Footer icon"
-                className="rounded-full w-10 h-11 bg-black"
-                src={footerIcon}
-              />
-            )}
-            {(footerTitle || footerSubtitle) && (
-              <div className="flex flex-col">
-                {footerTitle && (
-                  <p className="text-tiny text-white/60">{footerTitle}</p>
-                )}
-                {footerSubtitle && (
-                  <p className="text-tiny text-white/60">{footerSubtitle}</p>
-                )}
-              </div>
-            )}
-          </div>
-        )}
-        {buttonText && (
-          <Button className="text-tiny" color="primary" radius="full" size="sm">
-            {buttonText}
-          </Button>
-        )}
-      </CardFooter>
-    )}
-  </Card>
-);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === categories.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
 
-export default function CategoryProducts() {
+    return () => clearInterval(interval);
+  }, [categories]);
+
   return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-1 px-8 mx-auto h-full items-center bg-gray-100 rounded-lg p-6 shadow-md">
-      <UnifiedCard
-        title="Stream the Acme event"
-        subtitle="What to watch"
-        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
-        footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
-        footerTitle="Breathing App"
-        footerSubtitle="Get a good night's sleep."
-        buttonText="Get App"
-      />
-      <UnifiedCard
-        title="Contribute to the planet"
-        subtitle="Plant a tree"
-        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
-        footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
-        footerTitle="Breathing App"
-        footerSubtitle="Get a good night's sleep."
-        buttonText="Get App"
-      />
-      <UnifiedCard
-        title="Creates beauty like a beast"
-        subtitle="Supercharged"
-        imageSrc="./extintores/EXTINTOR_CON_CO2.jpg"
-        footerIcon="https://nextui.org/images/breathing-app-icon.jpeg"
-        footerTitle="Breathing App"
-        footerSubtitle="Get a good night's sleep."
-        buttonText="Get App"
-      />
+    <div className="relative w-full h-[400px] overflow-hidden">
+      {categories.map((category, index) => (
+        <div
+          key={index}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${
+            index === currentIndex ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <img
+            src={category.imageSrc}
+            alt={category.name}
+            className="w-full h-full object-contain"
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+            <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
+            <p className="text-sm">{category.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default function ProductCategories() {
+  
+
+  return (
+    <div className="max-w-[900px] mx-auto bg-gray-100 rounded-lg p-6 shadow-md">
+      <h1 className="text-3xl font-bold mb-4 text-center">Nuestras Categorías de Productos</h1>
+      <CategorySlider categories={category} />
     </div>
   );
 }
