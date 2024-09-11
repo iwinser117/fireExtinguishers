@@ -3,12 +3,12 @@ const MainSection = () => {
     <main className="image_container_hero w-10/12 mx-auto text-pretty mb-8">
       <section className="bg-gray-100 rounded-lg p-6 shadow-md">
         <div>
-          <h3 className="text-center font-bold text-3xl my-6 font-mono">
+          <h3 className="text-center font-bold text-2xl my-6 font-mono">
             Protección contra incendios en Bogotá
           </h3>
           <div>
             <div>
-              <p className="text-justify text-xl font-mono">
+              <p className="text-justify font-mono">
                 Protege lo que más importa con nuestro producto de seguridad
                 contra incendios en Bogotá en <strong>Extintores Inc</strong>,
                 entendemos la importancia de proteger tu hogar, negocio,

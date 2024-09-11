@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect  } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -13,8 +13,14 @@ import {
 } from "@nextui-org/react";
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
+import DemoContactModal from "./DemoContactModal";
 
 export default function Nav() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
 
@@ -22,7 +28,7 @@ export default function Nav() {
     { name: "Inicio", href: "/" },
     { name: "Productos", href: "/productos" },
     { name: "Nosotros", href: "/nosotros" },
-    { name: "Ubicación", href: "#" },
+    { name: "Ubicación", href: "/ubicacion" },
   ];
 
   const handleLinkClick = (href) => {
@@ -75,6 +81,7 @@ export default function Nav() {
             href="#"
             variant="light"
             className="bg-gradient-to-r from-red-600 to-yellow-300 font-semibold text-gray-950"
+            onPress={handleOpenModal}
           >
             Contacto
           </Button>
@@ -95,6 +102,7 @@ export default function Nav() {
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
+      <DemoContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </Navbar>
   );
 }

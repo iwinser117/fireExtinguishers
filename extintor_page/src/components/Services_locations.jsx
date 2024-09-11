@@ -1,17 +1,18 @@
-import { Divider, Image } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ServicesLocation = () => {
   return (
     <section className="p-4">
       <main>
-        <h2 className="text-2xl text-center font-mono w-full md:w-2/3 mx-auto">
+        <h2 className="text-2xl text-center font-mono w-full md:w-2/3 sm:w-2/3 mx-auto">
           La atención de nuestros productos y servicios la encuentras para las
           siguientes áreas
         </h2>
       </main>
       <Divider className="my-4" />
-      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 w-full md:w-8/12 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 w-full mx-auto md:w-full">
         <Link href="/vivienda" legacyBehavior>
           <a className="md:col-span-2 md:row-span-5 flex flex-col place-content-center transition-all duration-300 hover:brightness-150">
             <div className="relative flex items-center justify-center w-full md:w-96 sm :w-96 mx-auto z-20">
@@ -19,12 +20,12 @@ const ServicesLocation = () => {
                 Vivienda
               </h2>
               <Image
-                className="w-full h-auto md:h-full object-cover"
-                src="vivienda.jpg"
+                className="object-cover"
+                src="/vivienda-min.jpg"
                 alt="imagen de vivienda"
                 width={400}
                 height={350}
-                isBlurred
+                
               />
             </div>
           </a>
@@ -36,12 +37,12 @@ const ServicesLocation = () => {
                 educación
               </h2>
               <Image
-                className="w-full h-auto md:h-full object-cover"
-                src="colegio.jpg"
+                className="object-cover"
+                src="/colegio-min.jpg"
                 alt="imagen de colegio"
                 width={400}
                 height={250}
-                isBlurred
+                
               />
             </div>
           </a>
@@ -53,12 +54,12 @@ const ServicesLocation = () => {
                 industrias
               </h2>
               <Image
-                className="w-full h-auto md:h-full object-cover"
-                src="industrias.jpg"
+                className="object-cover"
+                src="/industrias-min.jpg"
                 alt="imagen de industrias"
                 width={400}
                 height={250}
-                isBlurred
+                
               />
             </div>
           </a>

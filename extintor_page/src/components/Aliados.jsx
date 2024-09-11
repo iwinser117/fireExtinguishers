@@ -28,7 +28,8 @@ export default function Aliados() {
         {allies.map((ally, index) => (
           <li key={index}>
             <Link
-              href={ally.href}
+              // href={ally.href}
+              href={'#'}
               className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:bg-blue-50 transition duration-300"
             >
               <ally.icon className="text-blue-500 text-xl mr-3" />

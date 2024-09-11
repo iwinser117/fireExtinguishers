@@ -8,7 +8,7 @@ const Banner_contact = () => {
 
             <a href="" className="text-4xl font-bold drop-shadow-lg ">Contacto</a>
             <p className="m-2 text-lg">Estamos aquí para ayudarte</p>
-            <ButtonSencillo image="whatsapp.png" />
+            <ButtonSencillo image="whatsapp-min.png" />
             </div>
           </div>
         </div>

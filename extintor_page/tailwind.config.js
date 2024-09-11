@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/banner.jpg')",
+        'hero-pattern': "url('/banner-min.jpg')",
       }
     }
   }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import CategoryProducts from "@/components/Categoty_products";
 import { Info } from 'lucide-react';
 
@@ -24,14 +25,19 @@ export default function ProductDetails({ selectedItem }) {
   }
 
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden h-full ">
+    <div className="bg-white shadow-lg rounded-lg overflow-hidden h-full">
       <div className="md:flex h-full items-center">
         <div className="md:w-1/3 flex items-center justify-center p-4">
-          <img
-            className="max-w-full max-h-64 object-contain"
-            src={selectedItem.image}
-            alt={selectedItem.name}
-          />
+          <div className="relative w-full aspect-square max-w-[250px]">
+            <Image
+              src={selectedItem.image}
+              alt={selectedItem.name}
+              layout="fill"
+              objectFit="contain"
+              priority
+              className="rounded-lg"
+            />
+          </div>
         </div>
         <div className="md:w-2/3 p-8">
           <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">

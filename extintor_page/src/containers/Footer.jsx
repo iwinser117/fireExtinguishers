@@ -34,7 +34,7 @@ const Footer = () => {
                   className="text-decoration-none"
                 >
                   Email <br />
-                  juanitoelbarbero@gmail.com
+                  micorreoextintores@apagate.com
                 </a>
               </p>
               <p className="text-center my-4">
