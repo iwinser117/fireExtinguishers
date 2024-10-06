@@ -3,8 +3,8 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Link 
 
 const DemoContactModal = ({ isOpen, onClose }) => {
   return (
-    <Modal 
-      isOpen={isOpen} 
+    <Modal
+      isOpen={isOpen}
       onClose={onClose}
       backdrop="blur"
     >
@@ -22,9 +22,9 @@ const DemoContactModal = ({ isOpen, onClose }) => {
           <Button color="danger" variant="light" onPress={onClose}>
             Cerrar
           </Button>
-          <Button 
+          <Button
             color="primary"
-            href="https:/linkedin.com/in/iwinser-aljadys-sanchez-0a62a0234"
+            href="https://www.linkedin.com/in/iwinser-aljadys-sanchez-0a62a0234"
             as={Link}
             showAnchorIcon
             target="_blank"
