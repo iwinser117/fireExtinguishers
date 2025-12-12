@@ -1,14 +1,21 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
 
-export default function ButtonSencillo({ text, image }) {
+export default function ButtonSencillo({ text = "Hablemos", image, href = "#", color = "warning" }) {
   return (
-    <Button size="lg" className="text-xl font-semibold bg-white" variant="bordered" olor="primary"  isIconOnly={!text}>
-      {image ? (
-        <img src={image} alt="Icon" className="h-8 w-8" />
-      ) : (
-        <span>{text}</span>
-      )}
+    <Button
+      as="a"
+      href={href}
+      target={href?.startsWith("http") ? "_blank" : undefined}
+      rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+      size="lg"
+      color={color}
+      className="text-base font-semibold shadow-md"
+      variant={text ? "solid" : "bordered"}
+      isIconOnly={!text}
+      startContent={image ? <img src={image} alt="Icono" className="h-8 w-8" /> : null}
+    >
+      {text || ""}
     </Button>
   );
 }

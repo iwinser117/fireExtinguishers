@@ -36,7 +36,7 @@ const paymentMethods = [
 
 export default function FooterSocial() {
   return (
-    <div className="w-full sm:full md:w-1/2 m-2 bg-gray-100 rounded-lg p-6 shadow-md flex flex-col h-full">
+    <div className="w-full m-2 bg-gray-100 rounded-lg p-6 shadow-md flex flex-col h-full">
       <div className="flex-1 flex flex-col justify-center mb-6">
         <h3 className="text-center text-2xl font-bold mb-6 text-gray-800">
           Redes sociales

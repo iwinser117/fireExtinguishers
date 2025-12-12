@@ -4,10 +4,10 @@ import Hero_image_copy from '@/components/Hero_description'
 
 const Hero = () => {
   return (
-    <div className="grid gap-12">
+    <section className="w-11/12 mx-auto max-w-6xl grid gap-10 pt-10 md:pt-16">
       <Hero_image />
-      <Hero_image_copy/>
-    </div>
+      <Hero_image_copy />
+    </section>
   );
 };
 

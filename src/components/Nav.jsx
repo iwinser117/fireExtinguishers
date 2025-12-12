@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -51,7 +51,7 @@ export default function Nav() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       shouldHideOnScroll
-      className="mb-4"
+      className="mb-4 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm"
     >
       <NavbarContent>
         <NavbarMenuToggle
@@ -60,27 +60,43 @@ export default function Nav() {
         />
         <NavbarBrand className="">
           <img src="logoextint.svg" alt="" width={25} />
-          <p className="font-bold text-inherit">Extintores Inc</p>
+          <div className="flex flex-col leading-tight">
+            <p className="font-bold text-slate-900">Extintores Inc</p>
+            <span className="text-[11px] text-amber-700 font-semibold">Respuesta 24/7</span>
+          </div>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {menuItems.map((item, index) => (
-          <NavbarItem key={index}>
-            <Link as={CustomLink} color="foreground" href={item.href} isBlock>
-              {item.name}
-            </Link>
-          </NavbarItem>
-        ))}
+      <NavbarContent className="hidden sm:flex gap-2" justify="center">
+        {menuItems.map((item) => {
+          const isActive = pathname === item.href;
+          return (
+            <NavbarItem key={item.href}>
+              <Link
+                as={CustomLink}
+                color="foreground"
+                className={`px-3 py-2 rounded-full font-semibold transition-colors ${
+                  isActive
+                    ? "text-amber-800 bg-amber-100 border border-amber-200"
+                    : "text-slate-900 hover:text-amber-700 hover:bg-amber-50"
+                }`}
+                href={item.href}
+                isBlock
+              >
+                {item.name}
+              </Link>
+            </NavbarItem>
+          );
+        })}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
+        <NavbarItem className="hidden sm:block">
           <Button
             as={CustomLink}
             color="danger"
             href="#"
             variant="light"
-            className="bg-gradient-to-r from-red-600 to-yellow-300 font-semibold text-gray-950"
+            className="bg-gradient-to-r from-amber-500 to-red-600 font-semibold text-white shadow-md hover:shadow-lg"
             onPress={handleOpenModal}
           >
             Contacto
@@ -93,7 +109,7 @@ export default function Nav() {
             <Link
               as={CustomLink}
               href={item.href}
-              className="w-full"
+              className="w-full font-semibold"
               size="lg"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -101,6 +117,20 @@ export default function Nav() {
             </Link>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem>
+          <Button
+            fullWidth
+            color="danger"
+            variant="solid"
+            className="mt-2 bg-gradient-to-r from-amber-500 to-red-600 text-white font-semibold"
+            onPress={() => {
+              setIsMenuOpen(false);
+              handleOpenModal();
+            }}
+          >
+            Contáctanos
+          </Button>
+        </NavbarMenuItem>
       </NavbarMenu>
       <DemoContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </Navbar>

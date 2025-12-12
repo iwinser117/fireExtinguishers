@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 body{
-  font-family: font-mono;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
 }
 :root {
   

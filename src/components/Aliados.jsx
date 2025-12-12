@@ -17,7 +17,7 @@ const allies = [
 
 export default function Aliados() {
   return (
-    <div className="w-full sm:full md:w-1/2 m-2 bg-gray-100 rounded-lg p-6 shadow-md">
+    <div className="w-full m-2 bg-gray-100 rounded-lg p-6 shadow-md">
       <h3 className="text-center text-2xl font-bold mb-4">
         Nuestros aliados
       </h3>

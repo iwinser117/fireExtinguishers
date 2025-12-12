@@ -1,69 +1,63 @@
-import { Divider } from "@nextui-org/react";
+import { Divider, Chip } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
 
+const areas = [
+  {
+    title: "Vivienda",
+    description: "Apartamentos, conjuntos y copropiedades con planes de inspección programada.",
+    image: "/vivienda-min.jpg",
+    href: "/vivienda",
+  },
+  {
+    title: "Educación",
+    description: "Colegios, universidades y centros de formación con señalización fotoluminiscente.",
+    image: "/colegio-min.jpg",
+    href: "/educacion",
+  },
+  {
+    title: "Industria",
+    description: "Plantas, bodegas y laboratorios con kits especializados y pruebas hidrostáticas.",
+    image: "/industrias-min.jpg",
+    href: "/industria",
+  },
+  {
+    title: "Comercio",
+    description: "Tiendas, restaurantes y oficinas con atención rápida y soporte documental.",
+    image: "/img3-min.jpg",
+    href: "/comercio",
+  },
+];
+
 const ServicesLocation = () => {
   return (
-    <section className="p-4">
-      <main>
-        <h2 className="text-2xl text-center font-mono w-full md:w-2/3 sm:w-2/3 mx-auto">
-          La atención de nuestros productos y servicios la encuentras para las
-          siguientes áreas
-        </h2>
-      </main>
+    <section className="w-11/12 mx-auto max-w-6xl" aria-labelledby="areas">
+      <div className="flex items-center justify-between flex-wrap gap-3 mb-4">
+        <div className="space-y-1">
+          <h2 id="areas" className="text-2xl md:text-3xl font-bold text-slate-900">
+            Cobertura por sector
+          </h2>
+          <p className="text-slate-600">Instalación, mantenimiento y señalización adaptada a cada tipo de espacio.</p>
+        </div>
+        <Chip color="warning" variant="flat">Despliegue en 48h</Chip>
+      </div>
+
       <Divider className="my-4" />
-      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-4 gap-4 w-full mx-auto md:w-full">
-        <Link href="/vivienda" legacyBehavior>
-          <a className="md:col-span-2 md:row-span-5 flex flex-col place-content-center transition-all duration-300 hover:brightness-150">
-            <div className="relative flex items-center justify-center w-full md:w-96 sm :w-96 mx-auto z-20">
-              <h2 className="absolute text-medium tracking-widest font-semibold z-50 bg-black text-yellow-400 rounded-lg p-2 uppercase">
-                Vivienda
-              </h2>
-              <Image
-                className="object-cover"
-                src="/vivienda-min.jpg"
-                alt="imagen de vivienda"
-                width={400}
-                height={350}
-                
-              />
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {areas.map((area) => (
+          <Link key={area.title} href={area.href} className="group relative overflow-hidden rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition duration-300 bg-slate-900">
+            <div className="relative h-64 w-full">
+              <Image src={area.image} alt={area.title} fill className="object-cover" sizes="(min-width: 1024px) 25vw, 50vw" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent group-hover:via-slate-900/30 transition" aria-hidden />
             </div>
-          </a>
-        </Link>
-        <Link href="/educación" legacyBehavior>
-          <a className="md:col-span-2 md:row-span-2 flex flex-col place-content-center transition-all duration-300 hover:brightness-150">
-            <div className="relative flex items-center justify-center w-96 mx-auto z-30 w-full md:w-96 sm :w-96">
-              <h2 className="absolute text-medium tracking-widest font-semibold z-50 bg-black text-yellow-400 rounded-lg p-2 uppercase">
-                educación
-              </h2>
-              <Image
-                className="object-cover"
-                src="/colegio-min.jpg"
-                alt="imagen de colegio"
-                width={400}
-                height={250}
-                
-              />
+            <div className="absolute inset-0 flex flex-col justify-end p-5 space-y-2 text-white">
+              <h3 className="text-xl font-semibold">{area.title}</h3>
+              <p className="text-sm text-white/80 leading-relaxed">{area.description}</p>
+              <span className="text-xs uppercase tracking-widest text-amber-300">Explorar sector</span>
             </div>
-          </a>
-        </Link>
-        <Link href="/industria" legacyBehavior>
-          <a className="md:col-span-2 md:row-span-2 flex flex-col place-content-center transition-all duration-300 hover:brightness-150">
-            <div className="relative flex items-center justify-center w-96 mx-auto z-30 w-full md:w-96 sm :w-96">
-              <h2 className="absolute text-medium tracking-widest font-semibold z-50 bg-black text-yellow-400 rounded-lg p-2 uppercase">
-                industrias
-              </h2>
-              <Image
-                className="object-cover"
-                src="/industrias-min.jpg"
-                alt="imagen de industrias"
-                width={400}
-                height={250}
-                
-              />
-            </div>
-          </a>
-        </Link>
+          </Link>
+        ))}
       </div>
     </section>
   );
